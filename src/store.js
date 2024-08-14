@@ -1,7 +1,9 @@
 import {createStore,combineReducers,applyMiddleware} from 'redux'
 import {thunk} from 'redux-thunk'
-
-const reducers = combineReducers({})
+import {allRestaurentReducer} from './reducers/getAllRestaurentReducer'
+const reducers = combineReducers({
+    allRestaurentReducer
+})
 const middleware = [thunk]
 const store = createStore(reducers,applyMiddleware(...middleware))
 
